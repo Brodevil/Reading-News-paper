@@ -8,11 +8,11 @@ def speak(str):
     speak.speak(str)
 
 
-def news_api(apikey="96926ea85ee242508e5527e0891be103"):
+def news_api(apikey):
     import json
     import requests
     response = requests.get("https://newsapi.org/v2/top-headlines?"
-                            "country=in&"
+                            "country=in&"   # As per your country you can just change the contry short name, For Example > India >in. Write it this way "country={your_country_short_name}&"
                             f"apiKey={apikey}")
 
     json_data = json.loads(response.text)
@@ -35,7 +35,7 @@ def readable(news):
 
 
 if __name__ == "__main__":
-    top_ten = news_api()
+    top_ten = news_api()    # Enter your API key as the argument
     news = readable(top_ten)
     for i in tuple(news):
         speak(i)
