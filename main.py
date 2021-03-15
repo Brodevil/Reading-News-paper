@@ -36,6 +36,7 @@ def readable(news):
 
 if __name__ == "__main__":
     top_ten = news_api()    # Enter your API key as the argument
-    news = readable(top_ten)
-    for i in tuple(news):
-        speak(i)
+    news = readable(top_ten)    # making the Responce readable
+    for i in news:
+        speak(i)    # speaking in news by the Python, End to End Top ten freast news
+        
