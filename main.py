@@ -12,7 +12,7 @@ def speak(str):
 
 
 def news_api(url="https://newsapi.org/v2/top-headlines?sources=the-times-of-india&apikey=96926ea85ee242508e5527e0891be103", apikey="96926ea85ee242508e5527e0891be103"):
-    i
+    
     if url == "https://newsapi.org/v2/top-headlines?sources=the-times-of-india&apikey=96926ea85ee242508e5527e0891be103":
         response = requests.get("https://newsapi.org/v2/top-headlines?"
                                 "sources=the-times-of-india&"
@@ -32,3 +32,5 @@ if __name__ == "__main__":
         speak(f"Title; {articles['title']}. \nDiscription; {articles['description']}. Actually; {articles['content']}\n")
         speak("Moving On next news!")
     speak("Thank you for listening")
+              
+ # how does the program is if you think you can best feel free to pull requests
