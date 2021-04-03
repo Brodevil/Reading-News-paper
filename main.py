@@ -11,7 +11,7 @@ def speak(str):
     speak.speak(str)
 
 
-def news_api(url="https://newsapi.org/v2/top-headlines?sources=the-times-of-india&apikey=96926ea85ee242508e5527e0891be103", apikey="96926ea85ee242508e5527e0891be103"):
+def news_api( apikey, url="https://newsapi.org/v2/top-headlines?sources=the-times-of-india&apikey=96926ea85ee242508e5527e0891be103"):
     
     if url == "https://newsapi.org/v2/top-headlines?sources=the-times-of-india&apikey=96926ea85ee242508e5527e0891be103":
         response = requests.get("https://newsapi.org/v2/top-headlines?"
