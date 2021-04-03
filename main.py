@@ -20,8 +20,11 @@ def news_api(apikey):
 
 
 if __name__ == "__main__":
-    top_ten = news_api()    # Enter your API key as the argument
-    news = readable(top_ten)    # making the Responce readable
-    for i in news:
-        speak(i)    # speaking in news by the Python, End to End Top ten freast news
+    top_ten = news_api()    # we have the acces to put the URL and our API key, Default link is also avalable 
+    arts = top_ten['articles']
+    for articles in arts:
+        print(f"Title: {articles['title']}. \nDiscription: {articles['description']}. Actually: {articles['content']}\nFor more info... Go to ==>>> {articles['url']}\n")
+        speak(f"Title; {articles['title']}. \nDiscription; {articles['description']}. Actually; {articles['content']}\n")
+        speak("Moving On next news!")
+    speak("Thank you for listening")
         
